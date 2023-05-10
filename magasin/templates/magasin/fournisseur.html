@@ -1,0 +1,22 @@
+{% extends 'magasin/base.html' %}
+{% load static %}
+{% block content %}
+
+<div class="container pagemajProduit">
+  <div class="row">
+    <div class="col-md-12 text-center">
+      <h2 class="text-primary">Manip Produit ...... </h2>
+    </div>
+    <div class="col-md-6 mx-auto">
+      <form method='POST' class="post-form">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <div class="text-center mt-3">
+          <button type="submit" class="btn btn-primary">Enregistrer</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+{% endblock %}
